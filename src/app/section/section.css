@@ -14,8 +14,11 @@
   background-color: azure;
   border: 1px solid black;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sub-section {
   margin: 15px 0;
+  align-self: center;
 }
