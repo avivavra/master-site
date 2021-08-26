@@ -8,7 +8,7 @@ const Section = ({ name, children }) => (
         <div className="section-name">
             {name}
         </div>
-        <div className="section-portions">
+        <div className="sub-sections">
             {children}
         </div>
     </div>
