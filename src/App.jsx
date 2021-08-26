@@ -2,12 +2,10 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-import { Typography } from '@material-ui/core';
 import LayoutMock from './app/mock/layoutMock';
-import Navbar from './app/navbar';
+import Navbar, { NavbarButton } from './app/navbar';
 import './App.css';
 
 const pages = [
@@ -24,9 +22,7 @@ const App = () => (
       <Navbar>
         {
           pages.map(({ path, name }) => (
-            <Typography color="inherit" variant="h6">
-              <Link to={path}>{name}</Link>
-            </Typography>
+            <NavbarButton path={path} name={name} />
           ))
         }
       </Navbar>
@@ -41,7 +37,6 @@ const App = () => (
         }
       </Switch>
     </Router>
-    <LayoutMock />
   </>
 );
 
