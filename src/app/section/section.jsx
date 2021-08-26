@@ -13,16 +13,22 @@ import './section.css';
 
 const Section = ({ name, children: subSections }) => (
     <Card className="section">
-        <CardHeader className="section-header" title={name} />
+        <CardHeader
+            className="section-header"
+            title={name}
+        />
         <CardContent className="sub-sections">
             <List>
                 {
-                    subSections.map((subSection) => (
+                    subSections.map((subSection, index) => (
                         <>
-                            <ListItem>
+                            <ListItem className="sub-section">
                                 {subSection}
                             </ListItem>
-                            <Divider />
+                            {
+                                index !== subSections.length - 1
+                                && <Divider />
+                            }
                         </>
                     ))
                 }
