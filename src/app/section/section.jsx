@@ -5,8 +5,12 @@ import './section.css';
 
 const Section = ({ name, children }) => (
     <div className="section">
-        <div className="section-name">{name}</div>
-        <div className="section-portions">{children}</div>
+        <div className="section-name">
+            {name}
+        </div>
+        <div className="section-portions">
+            {children}
+        </div>
     </div>
 );
 
