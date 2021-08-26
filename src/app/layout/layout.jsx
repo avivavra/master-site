@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { childrenPropType } from '../propTypes/reactPropTypes';
 import './layout.css';
 
 const Layout = ({ children }) => (
@@ -9,10 +9,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]).isRequired
+    children: childrenPropType.isRequired
 };
 
 export default Layout;
