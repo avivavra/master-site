@@ -20,8 +20,8 @@ module.exports = {
   rules: {
     'comma-dangle': 0,
     'linebreak-style': 0,
-    'indent': 0,
+    indent: 0,
     'react/jsx-indent': 0,
-    "import/prefer-default-export": 0
+    'import/prefer-default-export': 0
   },
 };

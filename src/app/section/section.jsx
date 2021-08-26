@@ -1,17 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+    Card,
+    CardHeader,
+    CardContent,
+    List,
+    ListItem,
+    Divider
+} from '@material-ui/core';
 import { childrenPropType } from '../propTypes/reactPropTypes';
 import './section.css';
 
-const Section = ({ name, children }) => (
-    <div className="section">
-        <div className="section-name">
-            {name}
-        </div>
-        <div className="sub-sections">
-            {children}
-        </div>
-    </div>
+const Section = ({ name, children: subSections }) => (
+    <Card className="section">
+        <CardHeader className="section-header" title={name} />
+        <CardContent className="sub-sections">
+            <List>
+                {
+                    subSections.map((subSection) => (
+                        <>
+                            <ListItem>
+                                {subSection}
+                            </ListItem>
+                            <Divider />
+                        </>
+                    ))
+                }
+            </List>
+        </CardContent>
+    </Card>
 );
 
 Section.propTypes = {
