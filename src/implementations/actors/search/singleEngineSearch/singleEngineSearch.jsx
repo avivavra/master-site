@@ -26,7 +26,7 @@ const SingleEngineSearch = ({ searchEngine }) => {
     return (
         <div className="single-engine-search">
             <Paper component="form">
-                <IconButton aria-label="search-site-link" className="search-site-link">
+                <IconButton aria-label="search-site-link" className="search-site-link" onClick={searchEngine.emptySearch}>
                     <img alt="site-link" src={searchEngine.logoUrl} className="search-site-link-img" />
                 </IconButton>
                 <InputBase
