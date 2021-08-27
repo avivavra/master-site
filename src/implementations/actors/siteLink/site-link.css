@@ -1,0 +1,9 @@
+.site-link {
+  width: 5rem;
+  height: 5rem;
+}
+
+.site-link-img {
+  width: inherit;
+  height: inherit;
+}
