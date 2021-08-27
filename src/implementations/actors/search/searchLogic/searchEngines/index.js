@@ -1,11 +1,5 @@
-import youtubeSearchEngine from './youtubeSearchEngine';
+import YoutubeSearchEngine from './youtubeSearchEngine';
 
-const searchEngines = [youtubeSearchEngine];
+const searchEngines = [YoutubeSearchEngine];
 
-const searchEnginesEnum = {};
-
-searchEngines.forEach((searchEngine) => {
-    searchEnginesEnum[searchEngine.name] = searchEngine;
-});
-
-export default searchEnginesEnum;
+export default searchEngines;

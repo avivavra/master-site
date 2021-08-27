@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Layout from '../layout';
 import Section from '../section';
 import SiteLink from '../../implementations/actors/siteLink';
+import SingleEngineSearch from '../../implementations/actors/search/singleEngineSearch';
+import { searchEngines } from '../../implementations/actors/search/searchLogic';
 
 const Image = ({ url }) => (
     <img src={url} alt="Sites" style={{ width: 100, height: 100 }} />
@@ -23,8 +25,7 @@ const CommunicationSection = () => (
             <button type="button">Send Whatsapp</button>
         </div>
         <div className="searches">
-            <button type="button">Search Instagram</button>
-            <input />
+            <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />
         </div>
     </Section>
 );
