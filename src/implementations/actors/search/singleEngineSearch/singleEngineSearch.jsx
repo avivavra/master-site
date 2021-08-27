@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
 import {
     IconButton,
     InputBase,
@@ -10,6 +10,12 @@ import searchEnginePropType from '../propTypes/searchEnginePropType';
 import './single-engine-search.css';
 
 const SingleEngineSearch = ({ searchEngine }) => {
+    const input = useRef();
+
+    const performSearch = useCallback(() => {
+        searchEngine.performSearch(input.current.value);
+    }, [searchEngine, input]);
+
     const searchText = `Search ${searchEngine.engineName}`;
 
     return (
@@ -20,9 +26,9 @@ const SingleEngineSearch = ({ searchEngine }) => {
                 </IconButton>
                 <InputBase
                     placeholder={searchText}
-                    inputProps={{ 'aria-label': 'search google maps' }}
+                    inputProps={{ 'aria-label': 'search google maps', ref: input }}
                 />
-                <IconButton type="submit" aria-label="search">
+                <IconButton type="submit" aria-label="search" onClick={performSearch}>
                     <SearchIcon />
                 </IconButton>
                 <IconButton color="primary" aria-label="clear">
