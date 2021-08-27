@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from '../layout';
 import Section from '../section';
-import SiteLink from '../../implementations/actors/siteLink';
+import SiteLink from '../../implementations/actors/iconLink/siteLink';
 import SingleEngineSearch from '../../implementations/actors/search/singleEngineSearch';
 import { searchEngines } from '../../implementations/actors/search/searchLogic';
 
