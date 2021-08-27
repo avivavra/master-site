@@ -1,4 +1,5 @@
 import React, { useRef, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import {
     IconButton,
     InputBase,
@@ -9,7 +10,7 @@ import ClearIcon from '@material-ui/icons/Clear';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
 import './single-engine-search.css';
 
-const SingleEngineSearch = ({ searchEngine }) => {
+const SingleEngineSearch = ({ searchEngine, autoFocus }) => {
     const input = useRef();
 
     const performSearch = useCallback(() => {
@@ -32,6 +33,7 @@ const SingleEngineSearch = ({ searchEngine }) => {
                 <InputBase
                     placeholder={searchText}
                     inputProps={{ 'aria-label': 'search google maps', ref: input }}
+                    autoFocus={autoFocus}
                 />
                 <IconButton aria-label="search" onClick={performSearch}>
                     <SearchIcon />
@@ -45,7 +47,8 @@ const SingleEngineSearch = ({ searchEngine }) => {
 };
 
 SingleEngineSearch.propTypes = {
-    searchEngine: searchEnginePropType.isRequired
+    searchEngine: searchEnginePropType.isRequired,
+    autoFocus: PropTypes.bool.isRequired
 };
 
 export default SingleEngineSearch;
