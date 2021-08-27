@@ -11,7 +11,7 @@ import {
 import { childrenPropType } from '../propTypes/reactPropTypes';
 import './section.css';
 
-const Section = ({ name, children: subSections }) => (
+const Section = ({ name, children: subSections, dividers }) => (
     <Card className="section">
         <CardHeader
             className="section-header"
@@ -26,7 +26,8 @@ const Section = ({ name, children: subSections }) => (
                                 {subSection}
                             </ListItem>
                             {
-                                index !== subSections.length - 1
+                                dividers
+                                && index !== subSections.length - 1
                                 && <Divider />
                             }
                         </>
@@ -39,7 +40,12 @@ const Section = ({ name, children: subSections }) => (
 
 Section.propTypes = {
     name: PropTypes.string.isRequired,
-    children: childrenPropType.isRequired
+    children: childrenPropType.isRequired,
+    dividers: PropTypes.bool
+};
+
+Section.defaultProps = {
+    dividers: true
 };
 
 export default Section;
