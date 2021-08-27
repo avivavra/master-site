@@ -4,7 +4,7 @@ import { Link } from '@material-ui/core';
 import './site-link.css';
 
 const IconLink = ({ iconUrl, url }) => (
-    <Link href={url} className="site-link">
+    <Link href={url} target="_blank" className="site-link">
         <img alt="icon" src={iconUrl} className="site-link-img" />
     </Link>
 );
