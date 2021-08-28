@@ -1,19 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout from '../layout';
 import Section from '../section';
 import SiteLink from '../../implementations/actors/links/siteLink';
 import SingleEngineSearch from '../../implementations/actors/search/singleEngineSearch';
 import { searchEngines } from '../../implementations/actors/search/searchLogic';
 import IconLink from '../../implementations/actors/links/iconLink';
-
-const Image = ({ url }) => (
-    <img src={url} alt="Sites" style={{ width: 100, height: 100 }} />
-);
-
-Image.propTypes = {
-    url: PropTypes.string.isRequired
-};
 
 const CommunicationSection = () => (
     <Section name="communication">
