@@ -5,7 +5,7 @@ import { SiteLink, IconLink } from '../implementations/styled/actors/links';
 import SingleEngineSearch from '../implementations/styled/actors/search/singleEngineSearch';
 import { searchEngines } from '../implementations/actors/search/searchLogic';
 import SubSection, { displayTypes } from '../app/styled/layouts/sectionsLayout/subSection';
-import SuperSearch from '../implementations/actors/search/superSearch/superSearch';
+import SuperSearch from '../implementations/styled/actors/search/superSearch';
 import { sectionWidths } from '../app/layouts/sectionsLayout/sectionsLayout';
 
 const CommunicationSection = () => (

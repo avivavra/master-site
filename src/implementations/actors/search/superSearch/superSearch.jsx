@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
-import SelectSearchEngine from '../selectSearchEngine/selectSearchEngine';
+import SelectSearchEngine from '../../../styled/actors/search/selectSearchEngine';
 import SingleEngineSearch from '../../../styled/actors/search/singleEngineSearch';
 
-const SuperSearch = ({ searchEngines, defaultSearchEngineId }) => {
+const SuperSearch = ({ searchEngines, defaultSearchEngineId, classes }) => {
     const [currentSearchEngineId, setCurrentSearchEngineId] = useState(defaultSearchEngineId);
 
     const searchEngine = useMemo(() => (
@@ -12,11 +12,12 @@ const SuperSearch = ({ searchEngines, defaultSearchEngineId }) => {
     ), [searchEngines, currentSearchEngineId]);
 
     return (
-        <div>
+        <div className={classes.root}>
             <SelectSearchEngine
                 searchEngines={searchEngines}
                 currentSearchEngineId={currentSearchEngineId}
                 setCurrentSearchEngineId={setCurrentSearchEngineId}
+                classes={classes.selectSearchEngine}
             />
             {
                 searchEngine
@@ -29,12 +30,12 @@ const SuperSearch = ({ searchEngines, defaultSearchEngineId }) => {
 SuperSearch.propTypes = {
     searchEngines: PropTypes.arrayOf(searchEnginePropType.isRequired).isRequired,
     defaultSearchEngineId: PropTypes.number,
-    // classes: PropTypes.instanceOf(Object)
+    classes: PropTypes.instanceOf(Object)
 };
 
 SuperSearch.defaultProps = {
-    // classes: {},
-    defaultSearchEngineId: null
+    defaultSearchEngineId: null,
+    classes: {}
 };
 
 export default SuperSearch;

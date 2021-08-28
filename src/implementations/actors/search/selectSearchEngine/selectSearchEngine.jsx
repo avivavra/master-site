@@ -8,13 +8,18 @@ import {
 } from '@material-ui/core';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
 
-const SelectSearchEngine = ({ searchEngines, currentSearchEngineId, setCurrentSearchEngineId }) => {
+const SelectSearchEngine = ({
+    searchEngines,
+    currentSearchEngineId,
+    setCurrentSearchEngineId,
+    classes
+}) => {
     const handleChange = (event) => {
         setCurrentSearchEngineId(event.target.value);
     };
 
     return (
-        <FormControl variant="outlined">
+        <FormControl component="span" variant="outlined" className={classes.root}>
             <InputLabel id="search-engine">Search Engine</InputLabel>
             <Select
                 labelId="search-engine"
@@ -38,7 +43,12 @@ const SelectSearchEngine = ({ searchEngines, currentSearchEngineId, setCurrentSe
 SelectSearchEngine.propTypes = {
     searchEngines: PropTypes.arrayOf(searchEnginePropType.isRequired).isRequired,
     currentSearchEngineId: PropTypes.number.isRequired,
-    setCurrentSearchEngineId: PropTypes.func.isRequired
+    setCurrentSearchEngineId: PropTypes.func.isRequired,
+    classes: PropTypes.instanceOf(Object)
+};
+
+SelectSearchEngine.defaultProps = {
+    classes: {}
 };
 
 export default SelectSearchEngine;

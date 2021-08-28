@@ -3,8 +3,7 @@ import SingleEngineSearch from '../../../../actors/search/singleEngineSearch';
 
 const styles = {
     searchLink: {
-        width: '4rem',
-        height: '4rem'
+        width: '4rem'
     },
     searchLinkImage: {
         width: 'inherit',

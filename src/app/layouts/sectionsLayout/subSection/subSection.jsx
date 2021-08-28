@@ -18,10 +18,7 @@ const SubSection = ({
         [displayTypes.COLUMN]: classes.rootColumn
     };
 
-    const rootClassName = clsx([
-        classes.root,
-        displayTypeToClassName[displayType]
-    ]);
+    const rootClassName = clsx(classes.root, displayTypeToClassName[displayType]);
 
     return (
         <div className={rootClassName}>
