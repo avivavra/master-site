@@ -8,7 +8,7 @@ import SubSection, { displayTypes } from '../app/styled/layouts/sectionsLayout/s
 
 const CommunicationSection = () => (
     <Section name="communication">
-        <SubSection>
+        <SubSection centered>
             <SiteLink
                 title="Facebook"
                 iconUrl="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
@@ -20,7 +20,7 @@ const CommunicationSection = () => (
                 url="https://web.whatsapp.com/"
             />
         </SubSection>
-        <SubSection>
+        <SubSection centered>
             <IconLink
                 title="Send Mail"
                 iconUrl="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png"
@@ -41,6 +41,7 @@ const CommunicationSection = () => (
 
 const LayoutMock = () => (
     <SectionsLayout>
+        <CommunicationSection />
         <CommunicationSection />
         <CommunicationSection />
         <CommunicationSection />

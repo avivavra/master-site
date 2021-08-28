@@ -14,8 +14,9 @@ const sectionWidths = {
 
 const SectionsLayout = ({ children, sectionWidth }) => {
     const sectionWidthToSize = {
-        [sectionWidths.SMALL]: 2,
-        [sectionWidths.MEDIUM]: 3,
+        [sectionWidths.EXTRA_SMALL]: 2,
+        [sectionWidths.SMALL]: 3,
+        [sectionWidths.MEDIUM]: 4,
         [sectionWidths.HALF_SCREEN]: 6,
         [sectionWidths.LARGE]: 9,
         [sectionWidths.FULL_SCREEN]: 12,
@@ -42,7 +43,7 @@ SectionsLayout.propTypes = {
 };
 
 SectionsLayout.defaultProps = {
-    sectionWidth: sectionWidths.HALF_SCREEN
+    sectionWidth: sectionWidths.MEDIUM
 };
 
 export { sectionWidths };

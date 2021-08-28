@@ -17,7 +17,8 @@ const styles = {
     },
     subSectionContainer: {
         margin: '15px 0',
-        'align-self': 'center'
+        'align-self': 'center',
+        'justify-content': 'center'
     }
 };
 
