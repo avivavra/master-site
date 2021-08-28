@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import { childrenPropType } from '../../../app/propTypes/reactPropTypes';
-import './simple-actor.css';
 
-const SimpleActor = ({ title, children }) => (
-    <span className="simple-actor">
+const styles = {
+    root: {
+        display: 'flex',
+        'flex-direction': 'column',
+        'text-align': 'center'
+    }
+};
+
+const SimpleActor = ({ title, children, classes }) => (
+    <span className={classes.root}>
         {children}
         {
             title
             && (
-                <Typography variant="caption" component="span" className="actor-title">
+                <Typography variant="caption" component="span">
                     {title}
                 </Typography>
             )
@@ -20,11 +27,13 @@ const SimpleActor = ({ title, children }) => (
 
 SimpleActor.propTypes = {
     title: PropTypes.string,
-    children: childrenPropType.isRequired
+    children: childrenPropType.isRequired,
+    classes: PropTypes.instanceOf(Object)
 };
 
 SimpleActor.defaultProps = {
-    title: null
+    title: null,
+    classes: {}
 };
 
-export default SimpleActor;
+export default withStyles(styles)(SimpleActor);
