@@ -9,20 +9,24 @@ import {
     Divider
 } from '@material-ui/core';
 import { childrenPropType } from '../propTypes/reactPropTypes';
-import './section.css';
 
-const Section = ({ name, children: subSections, dividers }) => (
-    <Card className="section">
+const Section = ({
+    name,
+    children: subSections,
+    dividers,
+    classes
+}) => (
+    <Card className={classes.root}>
         <CardHeader
-            className="section-header"
+            className={classes.header}
             title={name}
         />
-        <CardContent className="sub-sections">
+        <CardContent className={classes.subSections}>
             <List>
                 {
                     subSections.map((subSection, index) => (
                         <>
-                            <ListItem className="sub-section">
+                            <ListItem className={classes.subSectionContainer}>
                                 {subSection}
                             </ListItem>
                             {
@@ -41,11 +45,13 @@ const Section = ({ name, children: subSections, dividers }) => (
 Section.propTypes = {
     name: PropTypes.string.isRequired,
     children: childrenPropType.isRequired,
-    dividers: PropTypes.bool
+    dividers: PropTypes.bool,
+    classes: PropTypes.instanceOf(Object)
 };
 
 Section.defaultProps = {
-    dividers: true
+    dividers: true,
+    classes: {}
 };
 
 export default Section;

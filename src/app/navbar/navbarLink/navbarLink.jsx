@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 
 const NavbarLink = ({ path, name, classes }) => (
-    <Typography className={classes?.root} variant="h6">
+    <Typography className={classes.root} variant="h6">
         <Link to={path}>{name}</Link>
     </Typography>
 );
@@ -16,7 +16,7 @@ NavbarLink.propTypes = {
 };
 
 NavbarLink.defaultProps = {
-    classes: null
+    classes: {}
 };
 
 export default NavbarLink;

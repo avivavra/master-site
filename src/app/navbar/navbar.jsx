@@ -4,7 +4,7 @@ import { AppBar, MenuItem, Toolbar } from '@material-ui/core';
 import { childrenPropType } from '../propTypes/reactPropTypes';
 
 const Navbar = ({ children: navBarItems, classes }) => (
-    <AppBar position="static" className={classes?.root}>
+    <AppBar position="static" className={classes.root}>
         <Toolbar>
             {
                 navBarItems?.map((navBarItem) => (
@@ -22,7 +22,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
     children: null,
-    classes: null
+    classes: {}
 };
 
 export default Navbar;
