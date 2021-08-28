@@ -4,8 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import LayoutMock from './app/mock/layoutMock';
-import Navbar, { NavbarButton } from './app/navbar';
+import LayoutMock from './mock';
+import Navbar, { NavbarLink } from './app/styled/navbar';
 import './App.css';
 
 const pages = [
@@ -22,7 +22,7 @@ const App = () => (
       <Navbar>
         {
           pages.map(({ path, name }) => (
-            <NavbarButton path={path} name={name} />
+            <NavbarLink path={path} name={name} />
           ))
         }
       </Navbar>
