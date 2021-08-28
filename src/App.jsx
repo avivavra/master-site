@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import LayoutMock from './app/mock/layoutMock';
-import Navbar, { NavbarLink } from './app/navbar';
+import Navbar, { NavbarLink } from './app/styled/navbar';
 import './App.css';
 
 const pages = [
