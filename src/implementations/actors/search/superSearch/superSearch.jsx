@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
 import SelectSearchEngine from '../../../styled/actors/search/selectSearchEngine';
 import SingleEngineSearch from '../../../styled/actors/search/singleEngineSearch';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const SuperSearch = ({ searchEngines, defaultSearchEngineId, classes }) => {
     const [currentSearchEngineId, setCurrentSearchEngineId] = useState(defaultSearchEngineId);
@@ -19,10 +20,7 @@ const SuperSearch = ({ searchEngines, defaultSearchEngineId, classes }) => {
                 setCurrentSearchEngineId={setCurrentSearchEngineId}
                 classes={classes.selectSearchEngine}
             />
-            {
-                searchEngine
-                && <SingleEngineSearch searchEngine={searchEngine} />
-            }
+            <SingleEngineSearch searchEngine={searchEngine} />
         </div>
     );
 };
@@ -30,7 +28,7 @@ const SuperSearch = ({ searchEngines, defaultSearchEngineId, classes }) => {
 SuperSearch.propTypes = {
     searchEngines: PropTypes.arrayOf(searchEnginePropType.isRequired).isRequired,
     defaultSearchEngineId: PropTypes.number,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 SuperSearch.defaultProps = {

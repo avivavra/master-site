@@ -7,6 +7,7 @@ import {
     Select
 } from '@material-ui/core';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const SelectSearchEngine = ({
     searchEngines,
@@ -44,7 +45,7 @@ SelectSearchEngine.propTypes = {
     searchEngines: PropTypes.arrayOf(searchEnginePropType.isRequired).isRequired,
     currentSearchEngineId: PropTypes.number.isRequired,
     setCurrentSearchEngineId: PropTypes.func.isRequired,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 SelectSearchEngine.defaultProps = {

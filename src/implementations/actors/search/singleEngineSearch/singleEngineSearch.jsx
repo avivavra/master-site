@@ -8,6 +8,7 @@ import {
 import SearchIcon from '@material-ui/icons/Search';
 import ClearIcon from '@material-ui/icons/Clear';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const SingleEngineSearch = ({ searchEngine, autoFocus, classes }) => {
     const input = useRef();
@@ -21,19 +22,25 @@ const SingleEngineSearch = ({ searchEngine, autoFocus, classes }) => {
         clearInput();
     }, [searchEngine, input, clearInput]);
 
-    const searchText = `Search ${searchEngine.engineName}`;
+    const searchText = `Search${searchEngine ? ` ${searchEngine.engineName}` : ''}`;
 
     return (
         <Paper component="form" className={classes.root}>
-            <IconButton aria-label="search-site-link" className={classes.searchLink} onClick={searchEngine.emptySearch}>
-                <img alt="site-link" src={searchEngine.logoUrl} className={classes.searchLinkImage} />
-            </IconButton>
+            {
+                searchEngine
+                && (
+                    <IconButton aria-label="search-site-link" className={classes.searchLink} onClick={searchEngine.emptySearch}>
+                        <img alt="site-link" src={searchEngine.logoUrl} className={classes.searchLinkImage} />
+                    </IconButton>
+                )
+            }
             <InputBase
                 placeholder={searchText}
-                inputProps={{ 'aria-label': 'search google maps', ref: input }}
+                inputProps={{ 'aria-label': 'search', ref: input }}
                 autoFocus={autoFocus}
+                className={classes.searchInput}
             />
-            <IconButton aria-label="search" onClick={performSearch}>
+            <IconButton aria-label="search" disabled={!searchEngine} onClick={performSearch}>
                 <SearchIcon />
             </IconButton>
             <IconButton color="primary" aria-label="clear" onClick={clearInput}>
@@ -44,12 +51,13 @@ const SingleEngineSearch = ({ searchEngine, autoFocus, classes }) => {
 };
 
 SingleEngineSearch.propTypes = {
-    searchEngine: searchEnginePropType.isRequired,
+    searchEngine: searchEnginePropType,
     autoFocus: PropTypes.bool.isRequired,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 SingleEngineSearch.defaultProps = {
+    searchEngine: null,
     classes: {}
 };
 

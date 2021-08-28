@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { AppBar, MenuItem, Toolbar } from '@material-ui/core';
-import { childrenPropType } from '../propTypes/reactPropTypes';
+import { childrenPropType } from '../../propTypes/reactPropTypes';
+import { classesPropType } from '../../propTypes/materialUIPropTypes';
 
 const Navbar = ({ children: navBarItems, classes }) => (
     <AppBar position="static" className={classes.root}>
@@ -17,7 +17,7 @@ const Navbar = ({ children: navBarItems, classes }) => (
 
 Navbar.propTypes = {
     children: childrenPropType,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 Navbar.defaultProps = {

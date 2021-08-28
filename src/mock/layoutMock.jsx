@@ -39,7 +39,7 @@ const CommunicationSection = () => (
                 searchEngines={[searchEngines.YOUTUBE]}
                 defaultSearchEngine={searchEngines.YOUTUBE}
             />
-            <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />
+            <SingleEngineSearch />
             <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />
         </SubSection>
     </Section>

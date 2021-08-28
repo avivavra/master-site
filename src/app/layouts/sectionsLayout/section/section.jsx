@@ -8,7 +8,8 @@ import {
     ListItem,
     Divider
 } from '@material-ui/core';
-import { childrenPropType } from '../../../propTypes/reactPropTypes';
+import { childrenPropType } from '../../../../propTypes/reactPropTypes';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const Section = ({
     name,
@@ -46,7 +47,7 @@ Section.propTypes = {
     name: PropTypes.string.isRequired,
     children: childrenPropType.isRequired,
     dividers: PropTypes.bool,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 Section.defaultProps = {

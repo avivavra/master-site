@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import SimpleActor from '../../simpleActor';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const IconLink = ({
     title,
@@ -20,7 +21,7 @@ IconLink.propTypes = {
     title: PropTypes.string,
     iconUrl: PropTypes.string.isRequired,
     action: PropTypes.func.isRequired,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 IconLink.defaultProps = {
