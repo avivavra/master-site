@@ -1,10 +1,9 @@
 import React from 'react';
 import Layout from '../layout';
 import Section from '../styled/section';
-import SiteLink from '../../implementations/actors/links/siteLink';
-import SingleEngineSearch from '../../implementations/actors/search/singleEngineSearch';
+import { SiteLink, IconLink } from '../../implementations/styled/actors/links';
+import SingleEngineSearch from '../../implementations/styled/actors/search/singleEngineSearch';
 import { searchEngines } from '../../implementations/actors/search/searchLogic';
-import IconLink from '../../implementations/actors/links/iconLink';
 
 const CommunicationSection = () => (
     <Section name="communication">

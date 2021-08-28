@@ -8,9 +8,8 @@ import {
 import SearchIcon from '@material-ui/icons/Search';
 import ClearIcon from '@material-ui/icons/Clear';
 import searchEnginePropType from '../propTypes/searchEnginePropType';
-import './single-engine-search.css';
 
-const SingleEngineSearch = ({ searchEngine, autoFocus }) => {
+const SingleEngineSearch = ({ searchEngine, autoFocus, classes }) => {
     const input = useRef();
 
     const clearInput = useCallback(() => {
@@ -25,9 +24,9 @@ const SingleEngineSearch = ({ searchEngine, autoFocus }) => {
     const searchText = `Search ${searchEngine.engineName}`;
 
     return (
-        <Paper component="form" className="single-engine-search">
-            <IconButton aria-label="search-site-link" className="search-site-link" onClick={searchEngine.emptySearch}>
-                <img alt="site-link" src={searchEngine.logoUrl} className="search-site-link-img" />
+        <Paper component="form" className={classes.root}>
+            <IconButton aria-label="search-site-link" className={classes.searchLink} onClick={searchEngine.emptySearch}>
+                <img alt="site-link" src={searchEngine.logoUrl} className={classes.searchLinkImage} />
             </IconButton>
             <InputBase
                 placeholder={searchText}
@@ -46,7 +45,12 @@ const SingleEngineSearch = ({ searchEngine, autoFocus }) => {
 
 SingleEngineSearch.propTypes = {
     searchEngine: searchEnginePropType.isRequired,
-    autoFocus: PropTypes.bool.isRequired
+    autoFocus: PropTypes.bool.isRequired,
+    classes: PropTypes.instanceOf(Object)
+};
+
+SingleEngineSearch.defaultProps = {
+    classes: {}
 };
 
 export default SingleEngineSearch;
