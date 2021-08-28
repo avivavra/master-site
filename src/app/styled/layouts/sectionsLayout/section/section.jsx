@@ -6,19 +6,19 @@ const styles = {
         padding: '10px',
         margin: '10px',
         display: 'flex',
-        'flex-direction': 'column'
+        flexDirection: 'column'
     },
     header: {
-        'align-self': 'center'
+        alignSelf: 'center'
     },
     subSections: {
         display: 'flex',
-        'flex-direction': 'column'
+        flexDirection: 'column'
     },
     subSectionContainer: {
         margin: '15px 0',
-        'align-self': 'center',
-        'justify-content': 'center'
+        alignSelf: 'center',
+        justifyContent: 'center'
     }
 };
 

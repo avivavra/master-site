@@ -6,10 +6,10 @@ const styles = {
         display: 'flex'
     },
     rootRow: {
-        'flex-direction': 'row'
+        flexDirection: 'row'
     },
     rootColumn: {
-        'flex-direction': 'column'
+        flexDirection: 'column'
     }
 };
 

@@ -6,8 +6,8 @@ import { childrenPropType } from '../../../app/propTypes/reactPropTypes';
 const styles = {
     root: {
         display: 'flex',
-        'flex-direction': 'column',
-        'text-align': 'center'
+        flexDirection: 'column',
+        textAlign: 'center'
     }
 };
 
