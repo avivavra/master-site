@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, withStyles } from '@material-ui/core';
-import { childrenPropType } from '../../../app/propTypes/reactPropTypes';
+import { childrenPropType } from '../../../propTypes/reactPropTypes';
+import { classesPropType } from '../../../propTypes/materialUIPropTypes';
 
 const styles = {
     root: {
@@ -28,7 +29,7 @@ const SimpleActor = ({ title, children, classes }) => (
 SimpleActor.propTypes = {
     title: PropTypes.string,
     children: childrenPropType.isRequired,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 SimpleActor.defaultProps = {

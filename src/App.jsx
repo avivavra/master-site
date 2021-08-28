@@ -22,7 +22,11 @@ const App = () => (
       <Navbar>
         {
           pages.map(({ path, name }) => (
-            <NavbarLink path={path} name={name} />
+            <NavbarLink
+              key={name}
+              name={name}
+              path={path}
+            />
           ))
         }
       </Navbar>
@@ -30,7 +34,7 @@ const App = () => (
       <Switch>
         {
           pages.map(({ path, component }) => (
-            <Route path={path}>
+            <Route key={path} path={path}>
               {component}
             </Route>
           ))

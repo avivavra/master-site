@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { childrenPropType } from '../../../propTypes/reactPropTypes';
+import { childrenPropType } from '../../../../propTypes/reactPropTypes';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const displayTypes = {
     ROW: 'row',
@@ -18,10 +19,7 @@ const SubSection = ({
         [displayTypes.COLUMN]: classes.rootColumn
     };
 
-    const rootClassName = clsx([
-        classes.root,
-        displayTypeToClassName[displayType]
-    ]);
+    const rootClassName = clsx(classes.root, displayTypeToClassName[displayType]);
 
     return (
         <div className={rootClassName}>
@@ -33,7 +31,7 @@ const SubSection = ({
 SubSection.propTypes = {
     displayType: PropTypes.oneOf(Object.values(displayTypes)),
     children: childrenPropType.isRequired,
-    classes: PropTypes.instanceOf(Object),
+    classes: classesPropType
 };
 
 SubSection.defaultProps = {

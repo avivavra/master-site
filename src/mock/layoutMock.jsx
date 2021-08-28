@@ -5,6 +5,8 @@ import { SiteLink, IconLink } from '../implementations/styled/actors/links';
 import SingleEngineSearch from '../implementations/styled/actors/search/singleEngineSearch';
 import { searchEngines } from '../implementations/actors/search/searchLogic';
 import SubSection, { displayTypes } from '../app/styled/layouts/sectionsLayout/subSection';
+import SuperSearch from '../implementations/styled/actors/search/superSearch';
+import { sectionWidths } from '../app/layouts/sectionsLayout/sectionsLayout';
 
 const CommunicationSection = () => (
     <Section name="communication">
@@ -33,14 +35,18 @@ const CommunicationSection = () => (
             />
         </SubSection>
         <SubSection displayType={displayTypes.COLUMN}>
-            <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />
+            <SuperSearch
+                searchEngines={[searchEngines.YOUTUBE]}
+                defaultSearchEngine={searchEngines.YOUTUBE}
+            />
+            <SingleEngineSearch />
             <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />
         </SubSection>
     </Section>
 );
 
 const LayoutMock = () => (
-    <SectionsLayout>
+    <SectionsLayout sectionWidth={sectionWidths.HALF_SCREEN}>
         <CommunicationSection />
         <CommunicationSection />
         <CommunicationSection />

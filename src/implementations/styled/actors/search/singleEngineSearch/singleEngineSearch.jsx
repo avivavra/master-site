@@ -2,13 +2,22 @@ import { withStyles } from '@material-ui/core';
 import SingleEngineSearch from '../../../../actors/search/singleEngineSearch';
 
 const styles = {
+    root: {
+        border: '0.1px solid',
+        borderColor: 'lightgrey',
+        '&:focus-within': {
+            borderColor: 'blue'
+        }
+    },
     searchLink: {
-        width: '4rem',
-        height: '4rem'
+        maxWidth: '4rem'
     },
     searchLinkImage: {
         width: 'inherit',
         height: 'inherit'
+    },
+    searchInput: {
+        padding: '10px'
     }
 };
 

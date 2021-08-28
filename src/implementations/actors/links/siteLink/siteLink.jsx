@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Link } from '@material-ui/core';
 import SimpleActor from '../../simpleActor';
+import { classesPropType } from '../../../../propTypes/materialUIPropTypes';
 
 const SiteLink = ({
     title,
@@ -22,7 +23,7 @@ SiteLink.propTypes = {
     title: PropTypes.string,
     iconUrl: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    classes: PropTypes.instanceOf(Object)
+    classes: classesPropType
 };
 
 SiteLink.defaultProps = {
