@@ -7,8 +7,8 @@ const Navbar = ({ children: navBarItems, classes }) => (
     <AppBar position="static" className={classes.root}>
         <Toolbar>
             {
-                navBarItems?.map((navBarItem) => (
-                    <MenuItem>{navBarItem}</MenuItem>
+                navBarItems?.map((navbarItem) => (
+                    <MenuItem>{navbarItem}</MenuItem>
                 ))
             }
         </Toolbar>

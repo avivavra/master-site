@@ -52,12 +52,13 @@ const SingleEngineSearch = ({ searchEngine, autoFocus, classes }) => {
 
 SingleEngineSearch.propTypes = {
     searchEngine: searchEnginePropType,
-    autoFocus: PropTypes.bool.isRequired,
+    autoFocus: PropTypes.bool,
     classes: classesPropType
 };
 
 SingleEngineSearch.defaultProps = {
     searchEngine: null,
+    autoFocus: false,
     classes: {}
 };
 

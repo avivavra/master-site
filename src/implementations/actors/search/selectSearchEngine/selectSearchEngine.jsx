@@ -31,7 +31,7 @@ const SelectSearchEngine = ({
             >
                 {
                     searchEngines.map((searchEngine, i) => (
-                        <MenuItem value={i}>
+                        <MenuItem key={searchEngine.engineName} value={i}>
                             {searchEngine.engineName}
                         </MenuItem>
                     ))
@@ -43,12 +43,13 @@ const SelectSearchEngine = ({
 
 SelectSearchEngine.propTypes = {
     searchEngines: PropTypes.arrayOf(searchEnginePropType.isRequired).isRequired,
-    currentSearchEngineId: PropTypes.number.isRequired,
+    currentSearchEngineId: PropTypes.number,
     setCurrentSearchEngineId: PropTypes.func.isRequired,
     classes: classesPropType
 };
 
 SelectSearchEngine.defaultProps = {
+    currentSearchEngineId: null,
     classes: {}
 };
 
