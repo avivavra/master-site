@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { childrenPropType } from '../propTypes/reactPropTypes';
-import './layout.css';
+import { childrenPropType } from '../../propTypes/reactPropTypes';
+import './sections-layout.css';
 
-const Layout = ({ children }) => (
+const SectionsLayout = ({ children }) => (
     <Grid container id="layout">
         {
             children.map((child) => (
@@ -15,8 +15,8 @@ const Layout = ({ children }) => (
     </Grid>
 );
 
-Layout.propTypes = {
+SectionsLayout.propTypes = {
     children: childrenPropType.isRequired
 };
 
-export default Layout;
+export default SectionsLayout;

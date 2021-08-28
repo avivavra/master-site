@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { childrenPropType } from '../propTypes/reactPropTypes';
+import { childrenPropType } from '../../../propTypes/reactPropTypes';
 
 const displayTypes = {
     ROW: 'row',

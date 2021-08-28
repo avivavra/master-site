@@ -1,5 +1,5 @@
 import { withStyles } from '@material-ui/core';
-import SubSection from '../../subSection';
+import SubSection from '../../../../layouts/sectionsLayout/subSection';
 
 const styles = {
     root: {

@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../layout';
-import Section from '../styled/section';
-import { SiteLink, IconLink } from '../../implementations/styled/actors/links';
-import SingleEngineSearch from '../../implementations/styled/actors/search/singleEngineSearch';
-import { searchEngines } from '../../implementations/actors/search/searchLogic';
-import SubSection, { displayTypes } from '../styled/subSection';
+import SectionsLayout from '../app/layouts/sectionsLayout';
+import Section from '../app/styled/layouts/sectionsLayout/section';
+import { SiteLink, IconLink } from '../implementations/styled/actors/links';
+import SingleEngineSearch from '../implementations/styled/actors/search/singleEngineSearch';
+import { searchEngines } from '../implementations/actors/search/searchLogic';
+import SubSection, { displayTypes } from '../app/styled/layouts/sectionsLayout/subSection';
 
 const CommunicationSection = () => (
     <Section name="communication">
@@ -40,11 +40,11 @@ const CommunicationSection = () => (
 );
 
 const LayoutMock = () => (
-    <Layout>
+    <SectionsLayout>
         <CommunicationSection />
         <CommunicationSection />
         <CommunicationSection />
-    </Layout>
+    </SectionsLayout>
 );
 
 export default LayoutMock;

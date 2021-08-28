@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import LayoutMock from './app/mock/layoutMock';
+import LayoutMock from './mock';
 import Navbar, { NavbarLink } from './app/styled/navbar';
 import './App.css';
 

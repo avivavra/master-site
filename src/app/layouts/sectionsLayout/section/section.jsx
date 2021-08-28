@@ -8,7 +8,7 @@ import {
     ListItem,
     Divider
 } from '@material-ui/core';
-import { childrenPropType } from '../propTypes/reactPropTypes';
+import { childrenPropType } from '../../../propTypes/reactPropTypes';
 
 const Section = ({
     name,
