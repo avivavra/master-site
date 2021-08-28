@@ -16,12 +16,14 @@ Image.propTypes = {
 
 const CommunicationSection = () => (
     <Section name="communication">
-        <div className="links">
+        <div className="links" style={{ display: 'flex' }}>
             <SiteLink
+                title="Facebook"
                 iconUrl="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
                 url="https://www.facebook.com/"
             />
             <SiteLink
+                title="Whatsapp"
                 iconUrl="https://www.herzog.ac.il/wp-content/uploads/2017/11/whatsapp-symbol-icon-logo-vector.png"
                 url="https://web.whatsapp.com/"
             />

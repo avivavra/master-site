@@ -3,6 +3,10 @@
   height: 5rem;
 }
 
+.icon-link:hover {
+  transform: scale(1.05);
+}
+
 .icon-link-img {
   width: inherit;
   height: inherit;
