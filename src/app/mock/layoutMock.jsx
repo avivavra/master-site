@@ -5,6 +5,7 @@ import Section from '../section';
 import SiteLink from '../../implementations/actors/links/siteLink';
 import SingleEngineSearch from '../../implementations/actors/search/singleEngineSearch';
 import { searchEngines } from '../../implementations/actors/search/searchLogic';
+import IconLink from '../../implementations/actors/links/iconLink';
 
 const Image = ({ url }) => (
     <img src={url} alt="Sites" style={{ width: 100, height: 100 }} />
@@ -28,9 +29,17 @@ const CommunicationSection = () => (
                 url="https://web.whatsapp.com/"
             />
         </div>
-        <div className="commands">
-            <button type="button">Send Mail</button>
-            <button type="button">Send Whatsapp</button>
+        <div className="commands" style={{ display: 'flex' }}>
+            <IconLink
+                title="Send Mail"
+                iconUrl="https://cdn.icon-icons.com/icons2/730/PNG/512/gmail_icon-icons.com_62758.png"
+                action={() => { }}
+            />
+            <IconLink
+                title="Send Whatsapp"
+                iconUrl="https://icons-for-free.com/iconfiles/png/512/chat+message+send+share+talk+whatsapp+icon-1320192978490539083.png"
+                action={() => { }}
+            />
         </div>
         <div className="searches">
             <SingleEngineSearch searchEngine={searchEngines.YOUTUBE} />

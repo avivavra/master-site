@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
-import { SimpleActor } from '../../simpleActor';
+import SimpleActor from '../../simpleActor';
 import './icon-link.css';
 import '../link.css';
 

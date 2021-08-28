@@ -3,7 +3,6 @@
   margin: 10px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid; */
 }
 
 .section-header {
@@ -11,9 +10,6 @@
 }
 
 .sub-sections {
-  /* background-color: azure; */
-  /* border: 1px solid black;
-  border-radius: 5px; */
   display: flex;
   flex-direction: column;
 }
